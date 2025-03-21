@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 1 - Math Solutions</title>
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+</head>
+<body>
+    <h1>General Relativity</h1>
+
+    <h2>Section 1.1: Riemann's Habilitation</h2>
+
+    <h3>1.1.2</h3>
+    <p>Provide a computation which shows that the (Euclidean) line element for \(\mathbb{R}^2 \backslash \{(0,0)\}\) in polar coordinates takes the form of \(ds^2 = dr^2 + r^2 d\theta^2\).</p>
+
+    <p><strong>Solution:</strong></p>
+    <p>
+        As previously shown, the (Euclidean) line element, or Riemannian Metric, for \(\mathbb{R}^2\) in Cartesian coordinates takes the form \(ds^2 = dx^2 + dy^2\), and there exists a map from \(\mathbb{R}^2\) in Cartesian coordinates to \(\mathbb{R}^2 \backslash \{(0,0)\}\) in polar coordinates, which is defined parametrically as \(x = r \cos \theta\) and \(y = r \sin \theta\), for all \((x,y) \in \mathbb{R}^2 \backslash \{(0,0)\}\). We proceed by computing \(dx\) and \(dy\) in terms of \(r, \theta, dr, d\theta\), then making a direct substitution into the line element for \(\mathbb{R}^2\) Cartesian coordinates. From our change of coordinates, we have \(x\) and \(y\) as functions of \(r\) and \(\theta\) and we apply the chain rule:
+    </p>
+
+    <p>
+        \[
+        dx = \frac{\partial x}{\partial r} dr + \frac{\partial x}{\partial \theta} d\theta \implies dx = \frac{\partial}{\partial r}\left[ r \cos \theta \right] dr + \frac{\partial}{\partial \theta}\left[ r \cos \theta \right] d\theta
+        \]
+    </p>
+    <p>
+        \[
+        \therefore dx = \cos(\theta) dr - r \sin(\theta) d\theta
+        \]
+    </p>
+    <p>
+        \[
+        dy = \frac{\partial y}{\partial r} dr + \frac{\partial y}{\partial \theta} d\theta \implies dy = \frac{\partial}{\partial r}\left[ r \sin \theta \right] dr + \frac{\partial}{\partial \theta}\left[ r \sin \theta \right] d\theta
+        \]
+    </p>
+    <p>
+        \[
+        \therefore dy = \sin(\theta) dr + r \cos(\theta) d\theta.
+        \]
+    </p>
+    <p>Then, we make the following substitution and simplify:</p>
+
+    <p>
+        \[
+        ds^2 = dx^2 + dy^2 = \left[\cos(\theta) dr - r \sin(\theta) d\theta\right]^2 + \left[\sin(\theta) dr + r \cos(\theta) d\theta\right]^2
+        \]
+    </p>
+    <p>
+        \[
+        = \left[\cos^2(\theta) dr^2 - 2r \cos(\theta) \sin(\theta) dr d\theta + r^2 \sin^2(\theta) d\theta^2 \right] + \left[\sin^2(\theta) dr^2 + 2r \cos(\theta) \sin(\theta) dr d\theta + r^2 \cos^2(\theta) d\theta^2 \right]
+        \]
+    </p>
+    <p>
+        \[
+        = \left[\sin^2(\theta) + \cos^2(\theta)\right] dr^2 + r^2 \left[\sin^2(\theta) + \cos^2(\theta)\right] d\theta^2
+        \]
+    </p>
+    <p>
+        \[
+        = dr^2 + r^2 d\theta^2, \text{ as desired.}
+        \]
+    </p>
+
+     <h2 style="text-align: center;">Section 1.2: The Framework of Riemannian Geometry</h2>
+    
+    <h3>1.2.1: Consider the line element \(ds^2=\frac{dx^2+dy^2}{y^2}\) on the upper half-plane \(y>0\). Use this line element to compute the lengths of the following paths joining \((-1,1)\) and \((1,1)\). Which of the two paths is shorter?</h3>
+    
+    <ul>
+        <li>
+            <strong>(a) Let \(c_1\) be the "straight" line segment:</strong>
+            <pre>x(t)=t,~y(t)=1,~-1\leq t\leq 1.</pre>
+            <h4>Solution</h4>
+            <p>We proceed by solving for \(ds\), rewriting it in terms of the defined parametrization, and then integrating it over the interval to compute the length of the path. By taking square roots,</p>
+            <pre>
+                ds = \sqrt{\frac{dx^2 + dy^2}{y^2}} = \frac{1}{y} \sqrt{dx^2 + dy^2}.
+            </pre>
+            <p>The length of a path \(c_i\) is then the value of the definite integral:</p>
+            <pre>
+                L(c_i) = \int_a^b \frac{1}{y} \sqrt{dx^2 + dy^2} \, dt.
+            </pre>
+            <p>Hence, for \(c_1\):</p>
+            <pre>
+                L(c_1) = \int_{-1}^1 \frac{1}{y} \sqrt{dx^2 + dy^2} \, dt
+                        = \int_{-1}^1 \frac{1}{y(t)} \sqrt{\left( \frac{d}{dt}[x(t)] \right)^2 + \left( \frac{d}{dt}[y(t)] \right)^2} \, dt
+                        = \int_{-1}^1 1 \, dt
+                        = t \Big|_{-1}^1 = 1 - (-1) = 2.
+            </pre>
+        </li>
+        
+        <li>
+            <strong>(b) Let \(c_2\) be the "circular arc":</strong>
+            <pre>x(t)=\sqrt{2}\cos(t),~y(t)=\sqrt{2}\sin(t),~\frac{\pi}{4}\leq t\leq\frac{3\pi}{4}.</pre>
+            <h4>Solution</h4>
+            <p>Following directly from part (a),</p>
+            <pre>
+                L(c_2) = \int_{\frac{\pi}{4}}^{\frac{3\pi}{4}} \frac{1}{y(t)} \sqrt{\left( \frac{d}{dt}[x(t)] \right)^2 + \left( \frac{d}{dt}[y(t)] \right)^2} \, dt
+                        = \int_{\frac{\pi}{4}}^{\frac{3\pi}{4}} \frac{1}{\sqrt{2}\sin(t)} \sqrt{2 \left( (-\sin(t))^2 + (\cos(t))^2 \right)} \, dt
+                        = \int_{\frac{\pi}{4}}^{\frac{3\pi}{4}} \frac{\sqrt{2}}{\sqrt{2}\sin(t)} \sqrt{\sin^2(t) + \cos^2(t)} \, dt
+                        = \int_{\frac{\pi}{4}}^{\frac{3\pi}{4}} \frac{1}{\sin(t)} \, dt
+                        = \ln \left| \tan \left( \frac{t}{2} \right) \right| \Bigg|_{\frac{\pi}{4}}^{\frac{3\pi}{4}}
+                        \approx 1.76274...
+            </pre>
+            <p>Hence, the path \(c_2\) is shorter than path \(c_1\).</p>
+        </li>
+    </ul>
+
+    <h2 style="text-align: center;">Section 1.3: Geodesics</h2>
+    
+    <h3>1.3.5: Let \(c\) be a non-zero constant. Show that a curve \(\gamma(t)\) is a geodesic if and only if \(\gamma(ct)\) is.</h3>
+    <h4>Proof</h4>
+    <p>(\(\implies\)) Assume that some curve \(\gamma(t)\) is a geodesic. Then, \(\gamma(t)\) is a solution to the geodesic equation:</p>
+    <pre>
+        \frac{d^2x^k}{dt^2} + \sum_{i,j} \Gamma_{ij}^k \frac{dx^i}{dt} \frac{dx^j}{dt} = 0,
+    </pre>
+    <p>where \(\Gamma_{ij}^k := \frac{1}{2} g^{kl} \left[ \frac{\partial g_{lj}}{\partial x^i} + \frac{\partial g_{il}}{\partial x^j} - \frac{\partial g_{ij}}{\partial x^l} \right].</p>
+    <p>Consider the curve \(\gamma(t)\), but with its temporal component scaled by some non-zero \(c \in \mathbb{R}\). That is, consider the curve \(\gamma(ct)\). Notice that, in our case, the Christoffel symbols \(\Gamma_{ij}^k\) are expressed in terms of the metric and its spatial derivatives, but not the metric's temporal derivatives. This immediately implies that our Christoffel symbols remain unchanged by the temporal scaling.</p>
+    <pre>
+        \frac{d^2}{dt^2}\left[x^k(ct)\right] + \sum_{i,j} \Gamma_{ij}^k \frac{d}{dt}\left[x^i(ct)\right] \frac{d}{dt}\left[x^j(ct)\right] 
+        = c^2 \frac{d^2 x^k(ct)}{dt^2} + c^2 \sum_{i,j} \Gamma_{ij}^k \frac{dx^i(ct)}{dt} \frac{dx^j(ct)}{dt}
+        = 0
+    </pre>
+    <p>Hence, \(\gamma(t)\) being a geodesic implies that \(\gamma(ct)\) is also a geodesic.</p>
+
+    <p>(\(\impliedby\)) Assume that \(\gamma(ct)\) is a geodesic where \(c\) is a non-zero constant. Then, since \(1\) is a non-zero constant, take \(c=1\) and it immediately follows that \(\gamma(ct) = \gamma(t)\) and \(\gamma(t)\) is a geodesic.</p>
+
+    <p>Therefore, \(\gamma(t)\) is a geodesic if and only if \(\gamma(ct)\) is a geodesic where \(c\) is a non-zero constant.</p>
+
+    <h2 style="text-align: center;">Section 2.1: Introduction to Differential Calculus</h2>
+    
+    <h3>2.1.1: Compute the following commutators in \(\mathbb{R}^2\):</h3>
+    <ul>
+        <li>
+            <strong>(a) \(\left[x \partial_x, -y \partial_x + x \partial_y \right]\)</strong>
+            <h4>Solution</h4>
+            <pre>
+                \left[x \partial_x, -y \partial_x + x \partial_y \right] 
+                = x \partial_x \left[-y \partial_x + x \partial_y \right] 
+                - (-y \partial_x [x \partial_x] + x \partial_y [x \partial_x]) 
+                = x \partial_y + y \partial_x.
+            </pre>
+        </li>
+        
+        <li>
+            <strong>(b) \(\left[y \partial_y, -y \partial_x + x \partial_y \right]\)</strong>
+            <h4>Solution</h4>
+            <pre>
+                \left[y \partial_y, -y \partial_x + x \partial_y \right]
+                = -y \partial_x - x \partial_y.
+            </pre>
+        </li>
+
+        <li>
+            <strong>(c) \(\left[x \partial_x + y \partial_y, -y \partial_x + x \partial_y \right]\)</strong>
+            <h4>Solution</h4>
+            <pre>
+                \left[x \partial_x + y \partial_y, -y \partial_x + x \partial_y \right]
+                = x \partial_x + y \partial_y.
+            </pre>
+        </li>
+    </ul>
+
+
+</body>
+</html>
