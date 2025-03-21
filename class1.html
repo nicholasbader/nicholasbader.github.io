@@ -4,14 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Class 1 - Math Solutions</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"></script>
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
 </head>
 <body>
-    <h1>Class 1: Math Solutions</h1>
-    <p>Here is a math solution for Class 1:</p>
-    <p>\( \int_{a}^{b} f(x) \, dx = F(b) - F(a) \)</p>
-    
-    <!-- Link back to home page -->
-    <p><a href="index.html">Back to Home</a></p>
+    <h1>Class 1: Solutions to Exercises</h1>
+
+    <h2>Section 1.1: Riemann's Habilitation</h2>
+
+    <h3>1.1.2</h3>
+    <p>Provide a computation which shows that the (Euclidean) line element for \(\mathbb{R}^2 \backslash \{(0,0)\}\) in polar coordinates takes the form of \(ds^2 = dr^2 + r^2 d\theta^2\).</p>
+
+    <p><strong>Solution:</strong></p>
+    <p>
+        As previously shown, the (Euclidean) line element, or Riemannian Metric, for \(\mathbb{R}^2\) in Cartesian coordinates takes the form \(ds^2 = dx^2 + dy^2\), and there exists a map from \(\mathbb{R}^2\) in Cartesian coordinates to \(\mathbb{R}^2 \backslash \{(0,0)\}\) in polar coordinates, which is defined parametrically as \(x = r \cos \theta\) and \(y = r \sin \theta\), for all \((x,y) \in \mathbb{R}^2 \backslash \{(0,0)\}\). We proceed by computing \(dx\) and \(dy\) in terms of \(r, \theta, dr, d\theta\), then making a direct substitution into the line element for \(\mathbb{R}^2\) Cartesian coordinates. From our change of coordinates, we have \(x\) and \(y\) as functions of \(r\) and \(\theta\) and we apply the chain rule:
+    </p>
+
+    <p>
+        \[
+        dx = \frac{\partial x}{\partial r} dr + \frac{\partial x}{\partial \theta} d\theta \implies dx = \frac{\partial}{\partial r}\left[ r \cos \theta \right] dr + \frac{\partial}{\partial \theta}\left[ r \cos \theta \right] d\theta
+        \]
+    </p>
+    <p>
+        \[
+        \therefore dx = \cos(\theta) dr - r \sin(\theta) d\theta
+        \]
+    </p>
+    <p>
+        \[
+        dy = \frac{\partial y}{\partial r} dr + \frac{\partial y}{\partial \theta} d\theta \implies dy = \frac{\partial}{\partial r}\left[ r \sin \theta \right] dr + \frac{\partial}{\partial \theta}\left[ r \sin \theta \right] d\theta
+        \]
+    </p>
+    <p>
+        \[
+        \therefore dy = \sin(\theta) dr + r \cos(\theta) d\theta.
+        \]
+    </p>
+    <p>Then, we make the following substitution and simplify:</p>
+
+    <p>
+        \[
+        ds^2 = dx^2 + dy^2 = \left[\cos(\theta) dr - r \sin(\theta) d\theta\right]^2 + \left[\sin(\theta) dr + r \cos(\theta) d\theta\right]^2
+        \]
+    </p>
+    <p>
+        \[
+        = \left[\cos^2(\theta) dr^2 - 2r \cos(\theta) \sin(\theta) dr d\theta + r^2 \sin^2(\theta) d\theta^2 \right] + \left[\sin^2(\theta) dr^2 + 2r \cos(\theta) \sin(\theta) dr d\theta + r^2 \cos^2(\theta) d\theta^2 \right]
+        \]
+    </p>
+    <p>
+        \[
+        = \left[\sin^2(\theta) + \cos^2(\theta)\right] dr^2 + r^2 \left[\sin^2(\theta) + \cos^2(\theta)\right] d\theta^2
+        \]
+    </p>
+    <p>
+        \[
+        = dr^2 + r^2 d\theta^2, \text{ as desired.}
+        \]
+    </p>
+
 </body>
 </html>
