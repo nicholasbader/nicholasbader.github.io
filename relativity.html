@@ -64,6 +64,79 @@
         \]
     </p>
 
+ <h2>Section 1.2: The Framework of Riemannian Geometry</h2>
+
+    <h3>1.2.1</h3>
+    <p>Consider the line element \(ds^2 = \frac{dx^2 + dy^2}{y^2}\) on the upper half-plane \(y > 0\). Use this line element to compute the lengths of the following paths joining \((-1, 1)\) and \((1, 1)\). Which of the two paths is shorter?</p>
+
+    <ol>
+        <li><strong>Let \(c_1\) be the "straight" line segment:</strong>
+            <p>
+                \[
+                x(t) = t, ~ y(t) = 1, ~ -1 \leq t \leq 1.
+                \]
+            </p>
+            <p><strong>Solution:</strong></p>
+            <p>We proceed by solving for \(ds\), rewriting it in terms of the defined parametrization, and then integrating it over the interval to compute the length of the path. By taking square roots,</p>
+            <p>
+                \[
+                ds = \sqrt{\frac{dx^2 + dy^2}{y^2}} = \frac{1}{y} \sqrt{dx^2 + dy^2}.
+                \]
+            </p>
+            <p>The length of a path \(c_i\) is then the value of the definite integral:</p>
+            <p>
+                \[
+                L(c_i) = \int_a^b \frac{1}{y} \sqrt{dx^2 + dy^2} \, dt.
+                \]
+            </p>
+            <p>Hence, for \(c_1\):</p>
+            <p>
+                \[
+                L(c_1) = \int_{-1}^1 \frac{1}{y} \sqrt{dx^2 + dy^2} \, dt = \int_{-1}^1 \frac{1}{y(t)} \sqrt{\left(\frac{d}{dt}[x(t)]\right)^2 + \left(\frac{d}{dt}[y(t)]\right)^2} \, dt
+                \]
+            </p>
+            <p>
+                \[
+                = \int_{-1}^1 \frac{1}{1} \sqrt{\left(\frac{d}{dt}[t]\right)^2 + \left(\frac{d}{dt}[1]\right)^2} \, dt = \int_{-1}^1 1 \, dt = t \Big|_{-1}^1 = 1 - (-1) = 2.
+                \]
+            </p>
+        </li>
+        <li><strong>Let \(c_2\) be the "circular arc":</strong>
+            <p>
+                \[
+                x(t) = \sqrt{2} \cos(t), ~ y(t) = \sqrt{2} \sin(t), ~ \frac{\pi}{4} \leq t \leq \frac{3\pi}{4}.
+                \]
+            </p>
+            <p><strong>Solution:</strong></p>
+            <p>Following directly from part (a),</p>
+            <p>
+                \[
+                L(c_2) = \int_{\frac{\pi}{4}}^{\frac{3\pi}{4}} \frac{1}{y(t)} \sqrt{\left(\frac{d}{dt}[x(t)]\right)^2 + \left(\frac{d}{dt}[y(t)]\right)^2} \, dt
+                \]
+            </p>
+            <p>
+                = \int_{\frac{\pi}{4}}^{\frac{3\pi}{4}} \frac{1}{\sqrt{2} \sin(t)} \sqrt{2 \left(\left(-\sin(t)\right)^2 + \left(\cos(t)\right)^2\right)} \, dt
+                \]
+            </p>
+            <p>
+                = \int_{\frac{\pi}{4}}^{\frac{3\pi}{4}} \frac{\sqrt{2}}{\sqrt{2} \sin(t)} \sqrt{\sin^2(t) + \cos^2(t)} \, dt
+                \]
+            </p>
+            <p>
+                = \int_{\frac{\pi}{4}}^{\frac{3\pi}{4}} \frac{1}{\sin(t)} \, dt = \ln \left|\tan\left(\frac{t}{2}\right)\right| \Big|_{\frac{\pi}{4}}^{\frac{3\pi}{4}} = \ln(\sqrt{2} + 1) - \ln(\sqrt{2} - 1)
+                \]
+            </p>
+            <p>Approximately,</p>
+            <p>
+                \[
+                L(c_2) \approx 1.76274...
+                \]
+            </p>
+        </li>
+    </ol>
+    <p>Hence, the path \(c_2\) is shorter than path \(c_1\).</p>
+
+    
      <h2 style="text-align: center;">Section 1.2: The Framework of Riemannian Geometry</h2>
     
     <h3>1.2.1: Consider the line element \(ds^2=\frac{dx^2+dy^2}{y^2}\) on the upper half-plane \(y>0\). Use this line element to compute the lengths of the following paths joining \((-1,1)\) and \((1,1)\). Which of the two paths is shorter?</h3>
