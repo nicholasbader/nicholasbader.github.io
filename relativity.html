@@ -192,50 +192,7 @@
     Therefore, \( \gamma(t) \) is a geodesic if and only if \( \gamma(ct) \) is a geodesic where \( c \) is a non-zero constant.
 </p>
 
-    
-     <h2 style="text-align: center;">Section 1.2: The Framework of Riemannian Geometry</h2>
-    
-    <h3>1.2.1: Consider the line element \(ds^2=\frac{dx^2+dy^2}{y^2}\) on the upper half-plane \(y>0\). Use this line element to compute the lengths of the following paths joining \((-1,1)\) and \((1,1)\). Which of the two paths is shorter?</h3>
-    
-    <ul>
-        <li>
-            <strong>(a) Let \(c_1\) be the "straight" line segment:</strong>
-            <pre>x(t)=t,~y(t)=1,~-1\leq t\leq 1.</pre>
-            <h4>Solution</h4>
-            <p>We proceed by solving for \(ds\), rewriting it in terms of the defined parametrization, and then integrating it over the interval to compute the length of the path. By taking square roots,</p>
-            <pre>
-                ds = \sqrt{\frac{dx^2 + dy^2}{y^2}} = \frac{1}{y} \sqrt{dx^2 + dy^2}.
-            </pre>
-            <p>The length of a path \(c_i\) is then the value of the definite integral:</p>
-            <pre>
-                L(c_i) = \int_a^b \frac{1}{y} \sqrt{dx^2 + dy^2} \, dt.
-            </pre>
-            <p>Hence, for \(c_1\):</p>
-            <pre>
-                L(c_1) = \int_{-1}^1 \frac{1}{y} \sqrt{dx^2 + dy^2} \, dt
-                        = \int_{-1}^1 \frac{1}{y(t)} \sqrt{\left( \frac{d}{dt}[x(t)] \right)^2 + \left( \frac{d}{dt}[y(t)] \right)^2} \, dt
-                        = \int_{-1}^1 1 \, dt
-                        = t \Big|_{-1}^1 = 1 - (-1) = 2.
-            </pre>
-        </li>
-        
-        <li>
-            <strong>(b) Let \(c_2\) be the "circular arc":</strong>
-            <pre>x(t)=\sqrt{2}\cos(t),~y(t)=\sqrt{2}\sin(t),~\frac{\pi}{4}\leq t\leq\frac{3\pi}{4}.</pre>
-            <h4>Solution</h4>
-            <p>Following directly from part (a),</p>
-            <pre>
-                L(c_2) = \int_{\frac{\pi}{4}}^{\frac{3\pi}{4}} \frac{1}{y(t)} \sqrt{\left( \frac{d}{dt}[x(t)] \right)^2 + \left( \frac{d}{dt}[y(t)] \right)^2} \, dt
-                        = \int_{\frac{\pi}{4}}^{\frac{3\pi}{4}} \frac{1}{\sqrt{2}\sin(t)} \sqrt{2 \left( (-\sin(t))^2 + (\cos(t))^2 \right)} \, dt
-                        = \int_{\frac{\pi}{4}}^{\frac{3\pi}{4}} \frac{\sqrt{2}}{\sqrt{2}\sin(t)} \sqrt{\sin^2(t) + \cos^2(t)} \, dt
-                        = \int_{\frac{\pi}{4}}^{\frac{3\pi}{4}} \frac{1}{\sin(t)} \, dt
-                        = \ln \left| \tan \left( \frac{t}{2} \right) \right| \Bigg|_{\frac{\pi}{4}}^{\frac{3\pi}{4}}
-                        \approx 1.76274...
-            </pre>
-            <p>Hence, the path \(c_2\) is shorter than path \(c_1\).</p>
-        </li>
-    </ul>
-    
+
     <h3>2.1.1: Compute the following commutators in \(\mathbb{R}^2\):</h3>
     <ul>
         <li>
