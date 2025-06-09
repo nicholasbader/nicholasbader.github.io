@@ -165,3 +165,23 @@ nav a:hover {
         display: block;
     }
 }
+
+/* Make MathJax display math responsive */
+mjx-container[jax="CHTML"][display="true"] {
+    overflow-x: auto;
+    overflow-y: hidden;
+    max-width: 100%;
+    padding-bottom: 0.5em;
+}
+
+mjx-container[jax="CHTML"] {
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+mjx-container {
+    scrollbar-width: thin;
+    scrollbar-color: #aaa #eee;
+}
+
