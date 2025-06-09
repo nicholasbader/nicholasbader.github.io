@@ -39,247 +39,261 @@
 
     <main>
 
-    <h1>General Relativity</h1>
+        <h1>General Relativity</h1>
 
-    <h2>Section 1.1: Riemann's Habilitation</h2>
+        <h2>Section 1.1: Riemann's Habilitation</h2>
 
-    <h3>1.1.2</h3>
-    <p>Provide a computation which shows that the (Euclidean) line element for \(\mathbb{R}^2 \backslash \{(0,0)\}\) in polar coordinates takes the form of \(ds^2 = dr^2 + r^2 d\theta^2\).</p>
+        <h3>1.1.2</h3>
+        <p>Provide a computation which shows that the (Euclidean) line element for \(\mathbb{R}^2 \backslash \{(0,0)\}\) in polar coordinates takes the form of \(ds^2 = dr^2 + r^2 d\theta^2\).</p>
 
-    <p><strong>Solution:</strong></p>
-    <p>
-        As previously shown, the (Euclidean) line element, or Riemannian Metric, for \(\mathbb{R}^2\) in Cartesian coordinates takes the form \(ds^2 = dx^2 + dy^2\), and there exists a map from \(\mathbb{R}^2\) in Cartesian coordinates to \(\mathbb{R}^2 \backslash \{(0,0)\}\) in polar coordinates, which is defined parametrically as \(x = r \cos \theta\) and \(y = r \sin \theta\), for all \((x,y) \in \mathbb{R}^2 \backslash \{(0,0)\}\). We proceed by computing \(dx\) and \(dy\) in terms of \(r, \theta, dr, d\theta\), then making a direct substitution into the line element for \(\mathbb{R}^2\) Cartesian coordinates. From our change of coordinates, we have \(x\) and \(y\) as functions of \(r\) and \(\theta\) and we apply the chain rule:
-    </p>
+        <p><strong>Solution:</strong></p>
+        <p>
+            As previously shown, the (Euclidean) line element, or Riemannian Metric, for \(\mathbb{R}^2\) in Cartesian coordinates takes the form \(ds^2 = dx^2 + dy^2\), and there exists a map from \(\mathbb{R}^2\) in Cartesian coordinates to \(\mathbb{R}^2 \backslash \{(0,0)\}\) in polar coordinates, which is defined parametrically as \(x = r \cos \theta\) and \(y = r \sin \theta\), for all \((x,y) \in \mathbb{R}^2 \backslash \{(0,0)\}\). We proceed by computing \(dx\) and \(dy\) in terms of \(r, \theta, dr, d\theta\), then making a direct substitution into the line element for \(\mathbb{R}^2\) Cartesian coordinates. From our change of coordinates, we have \(x\) and \(y\) as functions of \(r\) and \(\theta\) and we apply the chain rule:
+        </p>
 
-    <p>
-        \[
-        dx = \frac{\partial x}{\partial r} dr + \frac{\partial x}{\partial \theta} d\theta \implies dx = \frac{\partial}{\partial r}\left[ r \cos \theta \right] dr + \frac{\partial}{\partial \theta}\left[ r \cos \theta \right] d\theta
-        \]
-    </p>
-    <p>
-        \[
-        \therefore dx = \cos(\theta) dr - r \sin(\theta) d\theta
-        \]
-    </p>
-    <p>
-        \[
-        dy = \frac{\partial y}{\partial r} dr + \frac{\partial y}{\partial \theta} d\theta \implies dy = \frac{\partial}{\partial r}\left[ r \sin \theta \right] dr + \frac{\partial}{\partial \theta}\left[ r \sin \theta \right] d\theta
-        \]
-    </p>
-    <p>
-        \[
-        \therefore dy = \sin(\theta) dr + r \cos(\theta) d\theta.
-        \]
-    </p>
-    <p>Then, we make the following substitution and simplify:</p>
+        <p>
+            \[
+            dx = \frac{\partial x}{\partial r} dr + \frac{\partial x}{\partial \theta} d\theta \implies dx = \frac{\partial}{\partial r}\left[ r \cos \theta \right] dr + \frac{\partial}{\partial \theta}\left[ r \cos \theta \right] d\theta
+            \]
+        </p>
+        <p>
+            \[
+            \therefore dx = \cos(\theta) dr - r \sin(\theta) d\theta
+            \]
+        </p>
+        <p>
+            \[
+            dy = \frac{\partial y}{\partial r} dr + \frac{\partial y}{\partial \theta} d\theta \implies dy = \frac{\partial}{\partial r}\left[ r \sin \theta \right] dr + \frac{\partial}{\partial \theta}\left[ r \sin \theta \right] d\theta
+            \]
+        </p>
+        <p>
+            \[
+            \therefore dy = \sin(\theta) dr + r \cos(\theta) d\theta.
+            \]
+        </p>
+        <p>Then, we make the following substitution and simplify:</p>
 
-    <p>
-        \[
-        ds^2 = dx^2 + dy^2 = \left[\cos(\theta) dr - r \sin(\theta) d\theta\right]^2 + \left[\sin(\theta) dr + r \cos(\theta) d\theta\right]^2
-        \]
-    </p>
+        <p>
+            \[
+            ds^2 = dx^2 + dy^2 = \left[\cos(\theta) dr - r \sin(\theta) d\theta\right]^2 + \left[\sin(\theta) dr + r \cos(\theta) d\theta\right]^2
+            \]
+        </p>
 
-    <p>
-        \[
-        = \left[\cos^2(\theta) dr^2 - 2r \cos(\theta) \sin(\theta) dr d\theta + r^2 \sin^2(\theta) d\theta^2 \right]
-        \]
-    </p>
+        <p>
+            \[
+            = \left[\cos^2(\theta) dr^2 - 2r \cos(\theta) \sin(\theta) dr d\theta + r^2 \sin^2(\theta) d\theta^2 \right]
+            \]
+        </p>
         <p>
             \[
             + \left[\sin^2(\theta) dr^2 + 2r \cos(\theta) \sin(\theta) dr d\theta + r^2 \cos^2(\theta) d\theta^2 \right]
             \]
         </p>
-    <p>
-        \[
-        = \left[\sin^2(\theta) + \cos^2(\theta)\right] dr^2 + r^2 \left[\sin^2(\theta) + \cos^2(\theta)\right] d\theta^2
-        \]
-    </p>
-    <p>
-        \[
-        = dr^2 + r^2 d\theta^2, \text{ as desired.}
-        \]
-    </p>
+        <p>
+            \[
+            = \left[\sin^2(\theta) + \cos^2(\theta)\right] dr^2 + r^2 \left[\sin^2(\theta) + \cos^2(\theta)\right] d\theta^2
+            \]
+        </p>
+        <p>
+            \[
+            = dr^2 + r^2 d\theta^2, \text{ as desired.}
+            \]
+        </p>
 
- <h2>Section 1.2: The Framework of Riemannian Geometry</h2>
+        <h2>Section 1.2: The Framework of Riemannian Geometry</h2>
 
-    <h3>1.2.1</h3>
-    <p>Consider the line element \(ds^2 = \frac{dx^2 + dy^2}{y^2}\) on the upper half-plane \(y > 0\). Use this line element to compute the lengths of the following paths joining \((-1, 1)\) and \((1, 1)\). Which of the two paths is shorter?</p>
+        <h3>1.2.1</h3>
+        <p>Consider the line element \(ds^2 = \frac{dx^2 + dy^2}{y^2}\) on the upper half-plane \(y > 0\). Use this line element to compute the lengths of the following paths joining \((-1, 1)\) and \((1, 1)\). Which of the two paths is shorter?</p>
 
-    <ol>
-        <li><strong>Let \(c_1\) be the "straight" line segment:</strong>
-            <p>
-                \[
-                x(t) = t, ~ y(t) = 1, ~ -1 \leq t \leq 1.
-                \]
-            </p>
-            <p><strong>Solution:</strong></p>
-            <p>We proceed by solving for \(ds\), rewriting it in terms of the defined parametrization, and then integrating it over the interval to compute the length of the path. By taking square roots,</p>
-            <p>
-                \[
-                ds = \sqrt{\frac{dx^2 + dy^2}{y^2}} = \frac{1}{y} \sqrt{dx^2 + dy^2}.
-                \]
-            </p>
-            <p>The length of a path \(c_i\) is then the value of the definite integral:</p>
-            <p>
-                \[
-                L(c_i) = \int_a^b \frac{1}{y} \sqrt{dx^2 + dy^2} \, dt.
-                \]
-            </p>
-            <p>Hence, for \(c_1\):</p>
-            <p>
-                \[
-                L(c_1) = \int_{-1}^1 \frac{1}{y} \sqrt{dx^2 + dy^2} \, dt = \int_{-1}^1 \frac{1}{y(t)} \sqrt{\left(\frac{d}{dt}[x(t)]\right)^2 + \left(\frac{d}{dt}[y(t)]\right)^2} \, dt
-                \]
-            </p>
-            <p>
-                \[
-                = \int_{-1}^1 \frac{1}{1} \sqrt{\left(\frac{d}{dt}[t]\right)^2 + \left(\frac{d}{dt}[1]\right)^2} \, dt = \int_{-1}^1 1 \, dt = t \Big|_{-1}^1 = 1 - (-1) = 2.
-                \]
-            </p>
-        </li>
-        <li><strong>Let \(c_2\) be the "circular arc":</strong>
-            <p>
-                \[
-                x(t) = \sqrt{2} \cos(t), ~ y(t) = \sqrt{2} \sin(t), ~ \frac{\pi}{4} \leq t \leq \frac{3\pi}{4}.
-                \]
-            </p>
-            <p><strong>Solution:</strong></p>
-            <p>Following directly from part (a),</p>
-            <p>
-                \[
-                L(c_2) = \int_{\frac{\pi}{4}}^{\frac{3\pi}{4}} \frac{1}{y(t)} \sqrt{\left(\frac{d}{dt}[x(t)]\right)^2 + \left(\frac{d}{dt}[y(t)]\right)^2} \, dt
-                \]
-            </p>
-            <p>
-                \[
-                = \int_{\frac{\pi}{4}}^{\frac{3\pi}{4}} \frac{1}{\sqrt{2} \sin(t)} \sqrt{2 \left(\left(-\sin(t)\right)^2 + \left(\cos(t)\right)^2\right)} \, dt
-                \]
-            </p>
-            <p>
-                \[
-                = \int_{\frac{\pi}{4}}^{\frac{3\pi}{4}} \frac{\sqrt{2}}{\sqrt{2} \sin(t)} \sqrt{\sin^2(t) + \cos^2(t)} \, dt
-                \]
-            </p>
-            <p>
-                \[
-                = \int_{\frac{\pi}{4}}^{\frac{3\pi}{4}} \frac{1}{\sin(t)} \, dt = \ln \left|\tan\left(\frac{t}{2}\right)\right| \Big|_{\frac{\pi}{4}}^{\frac{3\pi}{4}} = \ln(\sqrt{2} + 1) - \ln(\sqrt{2} - 1)
-                \]
-            </p>
-            <p>Approximately,</p>
-            <p>
-                \[
-                L(c_2) \approx 1.76274...
-                \]
-            </p>
-        </li>
-    </ol>
-    <p>Hence, the path \(c_2\) is shorter than path \(c_1\).</p>
+        <ol>
+            <li><strong>Let \(c_1\) be the "straight" line segment:</strong>
+                <p>
+                    \[
+                    x(t) = t, ~ y(t) = 1, ~ -1 \leq t \leq 1.
+                    \]
+                </p>
+                <p><strong>Solution:</strong></p>
+                <p>We proceed by solving for \(ds\), rewriting it in terms of the defined parametrization, and then integrating it over the interval to compute the length of the path. By taking square roots,</p>
+                <p>
+                    \[
+                    ds = \sqrt{\frac{dx^2 + dy^2}{y^2}} = \frac{1}{y} \sqrt{dx^2 + dy^2}.
+                    \]
+                </p>
+                <p>The length of a path \(c_i\) is then the value of the definite integral:</p>
+                <p>
+                    \[
+                    L(c_i) = \int_a^b \frac{1}{y} \sqrt{dx^2 + dy^2} \, dt.
+                    \]
+                </p>
+                <p>Hence, for \(c_1\):</p>
+                <p>
+                    \[
+                    L(c_1) = \int_{-1}^1 \frac{1}{y} \sqrt{dx^2 + dy^2} \, dt = \int_{-1}^1 \frac{1}{y(t)} \sqrt{\left(\frac{d}{dt}[x(t)]\right)^2 + \left(\frac{d}{dt}[y(t)]\right)^2} \, dt
+                    \]
+                </p>
+                <p>
+                    \[
+                    = \int_{-1}^1 \frac{1}{1} \sqrt{\left(\frac{d}{dt}[t]\right)^2 + \left(\frac{d}{dt}[1]\right)^2} \, dt = \int_{-1}^1 1 \, dt = t \Big|_{-1}^1 = 1 - (-1) = 2.
+                    \]
+                </p>
+            </li>
+            <li><strong>Let \(c_2\) be the "circular arc":</strong>
+                <p>
+                    \[
+                    x(t) = \sqrt{2} \cos(t), ~ y(t) = \sqrt{2} \sin(t), ~ \frac{\pi}{4} \leq t \leq \frac{3\pi}{4}.
+                    \]
+                </p>
+                <p><strong>Solution:</strong></p>
+                <p>Following directly from part (a),</p>
+                <p>
+                    \[
+                    L(c_2) = \int_{\frac{\pi}{4}}^{\frac{3\pi}{4}} \frac{1}{y(t)} \sqrt{\left(\frac{d}{dt}[x(t)]\right)^2 + \left(\frac{d}{dt}[y(t)]\right)^2} \, dt
+                    \]
+                </p>
+                <p>
+                    \[
+                    = \int_{\frac{\pi}{4}}^{\frac{3\pi}{4}} \frac{1}{\sqrt{2} \sin(t)} \sqrt{2 \left(\left(-\sin(t)\right)^2 + \left(\cos(t)\right)^2\right)} \, dt
+                    \]
+                </p>
+                <p>
+                    \[
+                    = \int_{\frac{\pi}{4}}^{\frac{3\pi}{4}} \frac{\sqrt{2}}{\sqrt{2} \sin(t)} \sqrt{\sin^2(t) + \cos^2(t)} \, dt
+                    \]
+                </p>
+                <p>
+                    \[
+                    = \int_{\frac{\pi}{4}}^{\frac{3\pi}{4}} \frac{1}{\sin(t)} \, dt = \ln \left|\tan\left(\frac{t}{2}\right)\right| \Big|_{\frac{\pi}{4}}^{\frac{3\pi}{4}} = \ln(\sqrt{2} + 1) - \ln(\sqrt{2} - 1)
+                    \]
+                </p>
+                <p>Approximately,</p>
+                <p>
+                    \[
+                    L(c_2) \approx 1.76274...
+                    \]
+                </p>
+            </li>
+        </ol>
+        <p>Hence, the path \(c_2\) is shorter than path \(c_1\).</p>
 
-    <h2>Section 1.3: Geodesics</h2>
-<p>
-    <strong>1.3.5:</strong> Let \( c \) be a non-zero constant. Show that a curve \( \gamma(t) \) is a geodesic if and only if \( \gamma(ct) \) is.
-</p>
-<p>
-    <strong>Proof:</strong>
-</p>
-<p>
-    (\( \implies \)) Assume that some curve \( \gamma(t) \) is a geodesic. Then, \( \gamma(t) \) is a solution to the geodesic equation:
-</p>
-<p>
-    \[
-        \frac{d^2 x^k}{dt^2} + \sum_{i,j} \Gamma_{ij}^k \frac{dx^i}{dt} \frac{dx^j}{dt} = 0, \quad \text{where} \quad \Gamma_{ij}^k := \frac{1}{2} g^{kl} \left[ \frac{\partial g_{lj}}{\partial x^i} + \frac{\partial g_{il}}{\partial x^j} - \frac{\partial g_{ij}}{\partial x^l} \right].
-    \]
-</p>
-<p>
-    To guarantee no loss of generality, we let \( \gamma(t) \) be a curve in \( n \)-dimensional space with coordinates \( (x^1(t), x^2(t), \dots, x^n(t)) \). That is, \( \gamma(t) = (x^1(t), x^2(t), \dots, x^n(t)) \in \mathbb{R}^n \). Taking the first and second derivatives of \( \gamma(t) \) yields respective \( \dot{\gamma}(t) = \left( \frac{dx^1(t)}{dt}, \frac{dx^2(t)}{dt}, \dots, \frac{dx^k(t)}{dt} \right) \) and \( \ddot{\gamma}(t) = \left( \frac{d^2 x^1(t)}{dt^2}, \frac{d^2 x^2(t)}{dt^2}, \dots, \frac{d^2 x^k(t)}{dt^2} \right) \). Let's now restate our geodesic equation to explicitly show its time dependence:
-</p>
-<p>
-    \[
-        \frac{d^2}{dt^2} \left[ x^k(t) \right] + \sum_{i,j} \Gamma_{ij}^k \frac{d}{dt} \left[ x^i(t) \right] \frac{d}{dt} \left[ x^j(t) \right] = 0, \quad \text{where} \quad \Gamma_{ij}^k := \frac{1}{2} g^{kl} \left[ \frac{\partial g_{lj}}{\partial x^i} + \frac{\partial g_{il}}{\partial x^j} - \frac{\partial g_{ij}}{\partial x^l} \right].
-    \]
-</p>
-<p>
-    Consider the curve \( \gamma(t) \), but with its temporal component scaled by some non-zero \( c \in \mathbb{R} \). That is, consider the curve \( \gamma(ct) \). Notice that, in our case, the Christoffel symbols \( \Gamma_{ij}^k \) are expressed in terms of the metric and its spatial derivatives, but not the metric's temporal derivatives. This immediately implies that our Christoffel symbols remain unchanged by the temporal scaling. Differentiating \( \gamma(ct) \) yields \( \dot{\gamma}(ct) = \left( c \frac{dx^1(ct)}{dt}, c \frac{dx^2(ct)}{dt}, \dots, c \frac{dx^k(ct)}{dt} \right) \) and \( \ddot{\gamma}(ct) = \left( c^2 \frac{d^2x^1(ct)}{dt^2}, c^2 \frac{d^2x^2(ct)}{dt^2}, \dots, c^2 \frac{d^2x^k(ct)}{dt^2} \right) \). We now check that \( \gamma(ct) \) is a solution to the geodesic equation:
-</p>
-<p>
-    \[
-        \frac{d^2}{dt^2} \left[ x^k(ct) \right] + \sum_{i,j} \Gamma_{ij}^k \frac{d}{dt} \left[ x^i(ct) \right] \frac{d}{dt} \left[ x^j(ct) \right] = c^2 \frac{d^2 x^k(ct)}{dt^2} + \sum_{i,j} \Gamma_{ij}^k c \frac{dx^i(ct)}{dt} c \frac{dx^j(ct)}{dt}
-    \]
-</p>
-<p>
-    \[
-        = c^2 \frac{d^2 x^k(ct)}{dt^2} + c^2 \sum_{i,j} \Gamma_{ij}^k \frac{dx^i(ct)}{dt} \frac{dx^j(ct)}{dt} = c^2 \left( \frac{d^2 x^k(ct)}{dt^2} + \sum_{i,j} \Gamma_{ij}^k \frac{dx^i(ct)}{dt} \frac{dx^j(ct)}{dt} \right) = 0
-    \]
-</p>
-<p>
-    \[
-        \frac{d^2 x^k(ct)}{dt^2} + \sum_{i,j} \Gamma_{ij}^k \frac{dx^i(ct)}{dt} \frac{dx^j(ct)}{dt} = 0.
-    \]
-</p>
-<p>
-    Hence, \( \gamma(t) \) being a geodesic implies that \( \gamma(ct) \) is also a geodesic.
-</p>
-<p>
-    <br>
-    (\( \impliedby \)) Assume that \( \gamma(ct) \) is a geodesic where \( c \) is a non-zero constant. Then, since \( 1 \) is a non-zero constant, take \( c = 1 \) and it immediately follows that \( \gamma(ct) = \gamma(t) \) and \( \gamma(t) \) is a geodesic.
-</p>
-<p>
-    <br>
-    Therefore, \( \gamma(t) \) is a geodesic if and only if \( \gamma(ct) \) is a geodesic where \( c \) is a non-zero constant.
-</p>
+        <h2>Section 1.3: Geodesics</h2>
+        <p>
+            <strong>1.3.5:</strong> Let \( c \) be a non-zero constant. Show that a curve \( \gamma(t) \) is a geodesic if and only if \( \gamma(ct) \) is.
+        </p>
+        <p>
+            <strong>Proof:</strong>
+        </p>
+        <p>
+            (\( \implies \)) Assume that some curve \( \gamma(t) \) is a geodesic. Then, \( \gamma(t) \) is a solution to the geodesic equation:
+        </p>
+        <p>
+            \[
+            \frac{d^2 x^k}{dt^2} + \sum_{i,j} \Gamma_{ij}^k \frac{dx^i}{dt} \frac{dx^j}{dt} = 0, \quad \text{where} \quad \Gamma_{ij}^k := \frac{1}{2} g^{kl} \left[ \frac{\partial g_{lj}}{\partial x^i} + \frac{\partial g_{il}}{\partial x^j} - \frac{\partial g_{ij}}{\partial x^l} \right].
+            \]
+        </p>
+        <p>
+            To guarantee no loss of generality, we let \( \gamma(t) \) be a curve in \( n \)-dimensional space with coordinates \( (x^1(t), x^2(t), \dots, x^n(t)) \). That is, \( \gamma(t) = (x^1(t), x^2(t), \dots, x^n(t)) \in \mathbb{R}^n \). Taking the first and second derivatives of \( \gamma(t) \) yields respective \( \dot{\gamma}(t) = \left( \frac{dx^1(t)}{dt}, \frac{dx^2(t)}{dt}, \dots, \frac{dx^k(t)}{dt} \right) \) and \( \ddot{\gamma}(t) = \left( \frac{d^2 x^1(t)}{dt^2}, \frac{d^2 x^2(t)}{dt^2}, \dots, \frac{d^2 x^k(t)}{dt^2} \right) \). Let's now restate our geodesic equation to explicitly show its time dependence:
+        </p>
+        <p>
+            \[
+            \frac{d^2}{dt^2} \left[ x^k(t) \right] + \sum_{i,j} \Gamma_{ij}^k \frac{d}{dt} \left[ x^i(t) \right] \frac{d}{dt} \left[ x^j(t) \right] = 0, \quad \text{where} \quad \Gamma_{ij}^k := \frac{1}{2} g^{kl} \left[ \frac{\partial g_{lj}}{\partial x^i} + \frac{\partial g_{il}}{\partial x^j} - \frac{\partial g_{ij}}{\partial x^l} \right].
+            \]
+        </p>
+        <p>
+            Consider the curve \( \gamma(t) \), but with its temporal component scaled by some non-zero \( c \in \mathbb{R} \). That is, consider the curve \( \gamma(ct) \). Notice that, in our case, the Christoffel symbols \( \Gamma_{ij}^k \) are expressed in terms of the metric and its spatial derivatives, but not the metric's temporal derivatives. This immediately implies that our Christoffel symbols remain unchanged by the temporal scaling. Differentiating \( \gamma(ct) \) yields \( \dot{\gamma}(ct) = \left( c \frac{dx^1(ct)}{dt}, c \frac{dx^2(ct)}{dt}, \dots, c \frac{dx^k(ct)}{dt} \right) \) and \( \ddot{\gamma}(ct) = \left( c^2 \frac{d^2x^1(ct)}{dt^2}, c^2 \frac{d^2x^2(ct)}{dt^2}, \dots, c^2 \frac{d^2x^k(ct)}{dt^2} \right) \). We now check that \( \gamma(ct) \) is a solution to the geodesic equation:
+        </p>
+        <p>
+            \[
+            \frac{d^2}{dt^2} \left[ x^k(ct) \right] + \sum_{i,j} \Gamma_{ij}^k \frac{d}{dt} \left[ x^i(ct) \right] \frac{d}{dt} \left[ x^j(ct) \right] = c^2 \frac{d^2 x^k(ct)}{dt^2} + \sum_{i,j} \Gamma_{ij}^k c \frac{dx^i(ct)}{dt} c \frac{dx^j(ct)}{dt}
+            \]
+        </p>
+        <p>
+            \[
+            = c^2 \frac{d^2 x^k(ct)}{dt^2} + c^2 \sum_{i,j} \Gamma_{ij}^k \frac{dx^i(ct)}{dt} \frac{dx^j(ct)}{dt} = c^2 \left( \frac{d^2 x^k(ct)}{dt^2} + \sum_{i,j} \Gamma_{ij}^k \frac{dx^i(ct)}{dt} \frac{dx^j(ct)}{dt} \right) = 0
+            \]
+        </p>
+        <p>
+            \[
+            \frac{d^2 x^k(ct)}{dt^2} + \sum_{i,j} \Gamma_{ij}^k \frac{dx^i(ct)}{dt} \frac{dx^j(ct)}{dt} = 0.
+            \]
+        </p>
+        <p>
+            Hence, \( \gamma(t) \) being a geodesic implies that \( \gamma(ct) \) is also a geodesic.
+        </p>
+        <p>
+            <br>
+            (\( \impliedby \)) Assume that \( \gamma(ct) \) is a geodesic where \( c \) is a non-zero constant. Then, since \( 1 \) is a non-zero constant, take \( c = 1 \) and it immediately follows that \( \gamma(ct) = \gamma(t) \) and \( \gamma(t) \) is a geodesic.
+        </p>
+        <p>
+            <br>
+            Therefore, \( \gamma(t) \) is a geodesic if and only if \( \gamma(ct) \) is a geodesic where \( c \) is a non-zero constant.
+        </p>
 
 
-    <h3>2.1.1: Compute the following commutators in \(\mathbb{R}^2\):</h3>
-    <ul>
-        <li>
-            <strong>(a) \(\left[x \partial_x, -y \partial_x + x \partial_y \right]\)</strong>
-            <h4>Solution</h4>
-            <p>
-                \[
-                   \left[x\partial_x,-y\partial_x+x\partial_y\right]=x\partial_x\left[-y\partial_x+x\partial_y\right]-(-y\partial_x[x\partial_x]+x\partial_y[x\partial_x])
-                \]
-            </p>
+        <h3>2.1.1: Compute the following commutators in \(\mathbb{R}^2\):</h3>
+        <ul>
+            <li>
+                <strong>(a) \(\left[x \partial_x, -y \partial_x + x \partial_y \right]\)</strong>
+                <h4>Solution</h4>
+                <p>
+                    \[
+                    \left[x\partial_x,-y\partial_x+x\partial_y\right]=x\partial_x\left[-y\partial_x+x\partial_y\right]-(-y\partial_x[x\partial_x]+x\partial_y[x\partial_x])
+                    \]
+                </p>
 
-            <p>
-                \[
-                =-xy\partial_x^2+x\partial_y+x^2\partial_x\partial_y+y\partial_x+yx\partial_x^2-x^2\partial_x\partial_y
-                \]
-            </p>
+                <p>
+                    \[
+                    =-xy\partial_x^2+x\partial_y+x^2\partial_x\partial_y+y\partial_x+yx\partial_x^2-x^2\partial_x\partial_y
+                    \]
+                </p>
 
-            <p>
-                \[
+                <p>
+                    \[
                     =x\partial_y+y\partial_x
-                \]
-                
-            </p>
-            
-        </li>
-        
-        <li>
-            <strong>(b) \(\left[y \partial_y, -y \partial_x + x \partial_y \right]\)</strong>
-            <h4>Solution</h4>
-            <p>
-                \[
-                \left[y \partial_y, -y \partial_x + x \partial_y \right]
-                = -y \partial_x - x \partial_y.
-                \]
-            </p>
-        </li>
+                    \]
 
-        <li>
-            <strong>(c) \(\left[x \partial_x + y \partial_y, -y \partial_x + x \partial_y \right]\)</strong>
-            <h4>Solution</h4>
-            <p>
-                \[
-                \left[x \partial_x + y \partial_y, -y \partial_x + x \partial_y \right]
-                = x \partial_x + y \partial_y.
-                \]
-            </p>
-        </li>
-    </ul>
+                </p>
+
+            </li>
+
+            <li>
+                <strong>(b) \(\left[y \partial_y, -y \partial_x + x \partial_y \right]\)</strong>
+                <h4>Solution</h4>
+                <p>
+                    \[
+                    \left[y \partial_y, -y \partial_x + x \partial_y \right]
+                    = -y \partial_x - x \partial_y.
+                    \]
+                </p>
+            </li>
+
+            <li>
+                <strong>(c) \(\left[x \partial_x + y \partial_y, -y \partial_x + x \partial_y \right]\)</strong>
+                <h4>Solution</h4>
+                <p>
+                    \[
+                    \left[x \partial_x + y \partial_y, -y \partial_x + x \partial_y \right]
+                    = x \partial_x + y \partial_y.
+                    \]
+                </p>
+            </li>
+        </ul>
+
+        <!--
+        <p>Hence, for \(c_1\):</p>
+           <script type="math/tex; mode=display" id="MathJax-Element-22">
+            L(c_1) = \int_{-1}^1 \frac{1}{y} \sqrt{dx^2 + dy^2} \, dt = \int_{-1}^1 \frac{1}{y(t)} \sqrt{\left(\frac{d}{dt}[x(t)]\right)^2 + \left(\frac{d}{dt}[y(t)]\right)^2} \, dt
+           </script>
+        <p>
+            \[
+            = \int_{-1}^1 \frac{1}{1} \sqrt{\left(\frac{d}{dt}[t]\right)^2 + \left(\frac{d}{dt}[1]\right)^2} \, dt = \int_{-1}^1 1 \, dt = t \Big|_{-1}^1 = 1 - (-1) = 2.
+            \]
+        </p>-->
+
+        <p><span class="math-container"><span class="MathJax_Preview" style=""></span><div class="MathJax_Display" style="text-align: center;"><span class="MathJax" id="MathJax-Element-22-Frame" tabindex="0" style="text-align: center; position: relative;" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;block&quot;><mn>0</mn><mo>=</mo><mfrac><msup><mi>d</mi><mrow class=&quot;MJX-TeXAtom-ORD&quot;><mspace width=&quot;thinmathspace&quot; /><mi>k</mi></mrow></msup><mrow><mi>d</mi><msup><mi>x</mi><mrow class=&quot;MJX-TeXAtom-ORD&quot;><mspace width=&quot;thinmathspace&quot; /><mi>k</mi></mrow></msup></mrow></mfrac><mstyle scriptlevel=&quot;0&quot;><mrow class=&quot;MJX-TeXAtom-OPEN&quot;><mo maxsize=&quot;1.623em&quot; minsize=&quot;1.623em&quot;>[</mo></mrow></mstyle><msubsup><mo>&amp;#x222B;</mo><mn>0</mn><mn>1</mn></msubsup><mi>&amp;#x03C6;</mi><mspace width=&quot;negativethinmathspace&quot; /><mstyle scriptlevel=&quot;0&quot;><mrow class=&quot;MJX-TeXAtom-OPEN&quot;><mo maxsize=&quot;1.2em&quot; minsize=&quot;1.2em&quot;>(</mo></mrow></mstyle><mi>a</mi><mo>+</mo><mi>x</mi><mi>t</mi><mstyle scriptlevel=&quot;0&quot;><mrow class=&quot;MJX-TeXAtom-CLOSE&quot;><mo maxsize=&quot;1.2em&quot; minsize=&quot;1.2em&quot;>)</mo></mrow></mstyle><mspace width=&quot;thinmathspace&quot; /><mi>d</mi><mi>&amp;#x03BB;</mi><mo stretchy=&quot;false&quot;>(</mo><mi>t</mi><mo stretchy=&quot;false&quot;>)</mo><msub><mstyle scriptlevel=&quot;0&quot;><mrow class=&quot;MJX-TeXAtom-CLOSE&quot;><mo maxsize=&quot;1.623em&quot; minsize=&quot;1.623em&quot;>]</mo></mrow></mstyle><mrow class=&quot;MJX-TeXAtom-ORD&quot;><mi>x</mi><mo>=</mo><mn>0</mn></mrow></msub><mo>=</mo><msubsup><mi>&amp;#x03C6;</mi><mrow class=&quot;MJX-TeXAtom-ORD&quot;><mo>+</mo></mrow><mrow class=&quot;MJX-TeXAtom-ORD&quot;><mo stretchy=&quot;false&quot;>(</mo><mi>k</mi><mo stretchy=&quot;false&quot;>)</mo></mrow></msubsup><mo stretchy=&quot;false&quot;>(</mo><mn>0</mn><mo stretchy=&quot;false&quot;>)</mo><msubsup><mo>&amp;#x222B;</mo><mn>0</mn><mn>1</mn></msubsup><mo stretchy=&quot;false&quot;>(</mo><mi>a</mi><mo>+</mo><mi>x</mi><mi>t</mi><msup><mo stretchy=&quot;false&quot;>)</mo><mi>k</mi></msup><mspace width=&quot;thinmathspace&quot; /><mi>d</mi><mi>&amp;#x03BB;</mi><mo stretchy=&quot;false&quot;>(</mo><mi>t</mi><mo stretchy=&quot;false&quot;>)</mo><mo>,</mo></math>" role="presentation"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-185" style="width: 31.806em; display: inline-block;"><span style="display: inline-block; position: relative; width: 26.068em; height: 0px; font-size: 122%;"><span style="position: absolute; clip: rect(1.751em, 1026.01em, 4.593em, -999.997em); top: -3.495em; left: 0em;"><span class="mrow" id="MathJax-Span-186"><span class="mn" id="MathJax-Span-187" style="font-family: STIXGeneral-Regular;">0</span><span class="mo" id="MathJax-Span-188" style="font-family: STIXGeneral-Regular; padding-left: 0.331em;">=</span><span class="mfrac" id="MathJax-Span-189" style="padding-left: 0.331em;"><span style="display: inline-block; position: relative; width: 1.861em; height: 0px; margin-right: 0.112em; margin-left: 0.112em;"><span style="position: absolute; clip: rect(3.008em, 1001.21em, 4.156em, -999.997em); top: -4.642em; left: 50%; margin-left: -0.598em;"><span class="msubsup" id="MathJax-Span-190"><span style="display: inline-block; position: relative; width: 1.205em; height: 0px;"><span style="position: absolute; clip: rect(3.172em, 1000.55em, 4.156em, -999.997em); top: -3.986em; left: 0em;"><span class="mi" id="MathJax-Span-191" style="font-family: STIXGeneral-Italic;">𝑑</span><span style="display: inline-block; width: 0px; height: 3.992em;"></span></span><span style="position: absolute; top: -4.369em; left: 0.549em;"><span class="texatom" id="MathJax-Span-192"><span class="mrow" id="MathJax-Span-193"><span class="mspace" id="MathJax-Span-194" style="height: 0em; vertical-align: 0em; width: 0.167em; display: inline-block; overflow: hidden;"></span><span class="mi" id="MathJax-Span-195" style="font-size: 70.7%; font-family: STIXGeneral-Italic;">𝑘</span></span></span><span style="display: inline-block; width: 0px; height: 3.992em;"></span></span></span></span><span style="display: inline-block; width: 0px; height: 3.992em;"></span></span><span style="position: absolute; clip: rect(3.063em, 1001.75em, 4.156em, -999.997em); top: -3.221em; left: 50%; margin-left: -0.872em;"><span class="mrow" id="MathJax-Span-196"><span class="mi" id="MathJax-Span-197" style="font-family: STIXGeneral-Italic;">𝑑</span><span class="msubsup" id="MathJax-Span-198"><span style="display: inline-block; position: relative; width: 1.205em; height: 0px;"><span style="position: absolute; clip: rect(3.391em, 1000.5em, 4.156em, -999.997em); top: -3.986em; left: 0em;"><span class="mi" id="MathJax-Span-199" style="font-family: STIXGeneral-Italic;">𝑥</span><span style="display: inline-block; width: 0px; height: 3.992em;"></span></span><span style="position: absolute; top: -4.26em; left: 0.549em;"><span class="texatom" id="MathJax-Span-200"><span class="mrow" id="MathJax-Span-201"><span class="mspace" id="MathJax-Span-202" style="height: 0em; vertical-align: 0em; width: 0.167em; display: inline-block; overflow: hidden;"></span><span class="mi" id="MathJax-Span-203" style="font-size: 70.7%; font-family: STIXGeneral-Italic;">𝑘</span></span></span><span style="display: inline-block; width: 0px; height: 3.992em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 3.992em;"></span></span><span style="position: absolute; clip: rect(0.877em, 1001.86em, 1.26em, -999.997em); top: -1.309em; left: 0em;"><span style="display: inline-block; overflow: hidden; vertical-align: 0em; border-top: 1.3px solid; width: 1.861em; height: 0px;"></span><span style="display: inline-block; width: 0px; height: 1.096em;"></span></span></span></span><span class="mstyle" id="MathJax-Span-204" style=""><span class="mrow" id="MathJax-Span-205"><span class="texatom" id="MathJax-Span-206" style=""><span class="mrow" id="MathJax-Span-207"><span class="mo" id="MathJax-Span-208" style="vertical-align: -0.38em;"><span style="font-family: STIXSizeTwoSym;">[</span></span></span></span></span></span><span class="msubsup" id="MathJax-Span-209"><span style="display: inline-block; position: relative; width: 1.642em; height: 0px;"><span style="position: absolute; clip: rect(2.462em, 1001.04em, 5.03em, -999.997em); top: -3.986em; left: 0em;"><span class="mo" id="MathJax-Span-210" style="font-family: STIXIntegralsD; vertical-align: -0.598em;">∫<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.44em;"></span></span><span style="display: inline-block; width: 0px; height: 3.992em;"></span></span><span style="position: absolute; clip: rect(3.336em, 1000.44em, 4.156em, -999.997em); top: -5.079em; left: 1.205em;"><span class="mn" id="MathJax-Span-211" style="font-size: 70.7%; font-family: STIXGeneral-Regular;">1</span><span style="display: inline-block; width: 0px; height: 3.992em;"></span></span><span style="position: absolute; clip: rect(3.336em, 1000.44em, 4.156em, -999.997em); top: -3.057em; left: 0.604em;"><span class="mn" id="MathJax-Span-212" style="font-size: 70.7%; font-family: STIXGeneral-Regular;">0</span><span style="display: inline-block; width: 0px; height: 3.992em;"></span></span></span></span><span class="mi" id="MathJax-Span-213" style="font-family: STIXGeneral-Italic; padding-left: 0.167em;">𝜑</span><span class="mspace" id="MathJax-Span-214" style="height: 0em; vertical-align: 0em; margin-left: -0.161em;"></span><span class="mstyle" id="MathJax-Span-215" style=""><span class="mrow" id="MathJax-Span-216"><span class="texatom" id="MathJax-Span-217" style=""><span class="mrow" id="MathJax-Span-218"><span class="mo" id="MathJax-Span-219" style="vertical-align: -0.27em;"><span><span style="font-size: 110%; font-family: STIXSizeOneSym;">(</span></span></span></span></span></span></span><span class="mi" id="MathJax-Span-220" style="font-family: STIXGeneral-Italic;">𝑎</span><span class="mo" id="MathJax-Span-221" style="font-family: STIXGeneral-Regular; padding-left: 0.276em;">+</span><span class="mi" id="MathJax-Span-222" style="font-family: STIXGeneral-Italic; padding-left: 0.276em;">𝑥</span><span class="mi" id="MathJax-Span-223" style="font-family: STIXGeneral-Italic;">𝑡</span><span class="mstyle" id="MathJax-Span-224" style=""><span class="mrow" id="MathJax-Span-225"><span class="texatom" id="MathJax-Span-226" style=""><span class="mrow" id="MathJax-Span-227"><span class="mo" id="MathJax-Span-228" style="vertical-align: -0.27em;"><span><span style="font-size: 110%; font-family: STIXSizeOneSym;">)</span></span></span></span></span></span></span><span class="mspace" id="MathJax-Span-229" style="height: 0em; vertical-align: 0em; width: 0.167em; display: inline-block; overflow: hidden;"></span><span class="mi" id="MathJax-Span-230" style="font-family: STIXGeneral-Italic;">𝑑</span><span class="mi" id="MathJax-Span-231" style="font-family: STIXGeneral-Italic;">𝜆</span><span class="mo" id="MathJax-Span-232" style="font-family: STIXGeneral-Regular;">(</span><span class="mi" id="MathJax-Span-233" style="font-family: STIXGeneral-Italic;">𝑡</span><span class="mo" id="MathJax-Span-234" style="font-family: STIXGeneral-Regular;">)</span><span class="msubsup" id="MathJax-Span-235" style=""><span style="display: inline-block; position: relative; width: 1.751em; height: 0px;"><span style="position: absolute; clip: rect(2.68em, 1000.28em, 4.811em, -999.997em); top: -3.986em; left: 0em;"><span class="mstyle" id="MathJax-Span-236" style=""><span class="mrow" id="MathJax-Span-237"><span class="texatom" id="MathJax-Span-238" style=""><span class="mrow" id="MathJax-Span-239"><span class="mo" id="MathJax-Span-240" style="vertical-align: -0.38em;"><span style="font-family: STIXSizeTwoSym;">]</span></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 3.992em;"></span></span><span style="position: absolute; top: -3.276em; left: 0.44em;"><span class="texatom" id="MathJax-Span-241"><span class="mrow" id="MathJax-Span-242"><span class="mi" id="MathJax-Span-243" style="font-size: 70.7%; font-family: STIXGeneral-Italic;">𝑥</span><span class="mo" id="MathJax-Span-244" style="font-size: 70.7%; font-family: STIXGeneral-Regular;">=</span><span class="mn" id="MathJax-Span-245" style="font-size: 70.7%; font-family: STIXGeneral-Regular;">0</span></span></span><span style="display: inline-block; width: 0px; height: 3.992em;"></span></span></span></span><span class="mo" id="MathJax-Span-246" style="font-family: STIXGeneral-Regular; padding-left: 0.331em;">=</span><span class="msubsup" id="MathJax-Span-247" style="padding-left: 0.331em;"><span style="display: inline-block; position: relative; width: 1.587em; height: 0px;"><span style="position: absolute; clip: rect(3.391em, 1000.66em, 4.32em, -999.997em); top: -3.986em; left: 0em;"><span class="mi" id="MathJax-Span-248" style="font-family: STIXGeneral-Italic;">𝜑</span><span style="display: inline-block; width: 0px; height: 3.992em;"></span></span><span style="position: absolute; clip: rect(3.336em, 1000.93em, 4.265em, -999.997em); top: -4.478em; left: 0.658em;"><span class="texatom" id="MathJax-Span-249"><span class="mrow" id="MathJax-Span-250"><span class="mo" id="MathJax-Span-251" style="font-size: 70.7%; font-family: STIXGeneral-Regular;">(</span><span class="mi" id="MathJax-Span-252" style="font-size: 70.7%; font-family: STIXGeneral-Italic;">𝑘</span><span class="mo" id="MathJax-Span-253" style="font-size: 70.7%; font-family: STIXGeneral-Regular;">)</span></span></span><span style="display: inline-block; width: 0px; height: 3.992em;"></span></span><span style="position: absolute; clip: rect(3.445em, 1000.55em, 4.21em, -999.997em); top: -3.768em; left: 0.658em;"><span class="texatom" id="MathJax-Span-254"><span class="mrow" id="MathJax-Span-255"><span class="mo" id="MathJax-Span-256" style="font-size: 70.7%; font-family: STIXGeneral-Regular;">+</span></span></span><span style="display: inline-block; width: 0px; height: 3.992em;"></span></span></span></span><span class="mo" id="MathJax-Span-257" style="font-family: STIXGeneral-Regular;">(</span><span class="mn" id="MathJax-Span-258" style="font-family: STIXGeneral-Regular;">0</span><span class="mo" id="MathJax-Span-259" style="font-family: STIXGeneral-Regular;">)</span><span class="msubsup" id="MathJax-Span-260" style="padding-left: 0.167em;"><span style="display: inline-block; position: relative; width: 1.642em; height: 0px;"><span style="position: absolute; clip: rect(2.462em, 1001.04em, 5.03em, -999.997em); top: -3.986em; left: 0em;"><span class="mo" id="MathJax-Span-261" style="font-family: STIXIntegralsD; vertical-align: -0.598em;">∫<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.44em;"></span></span><span style="display: inline-block; width: 0px; height: 3.992em;"></span></span><span style="position: absolute; clip: rect(3.336em, 1000.44em, 4.156em, -999.997em); top: -5.079em; left: 1.205em;"><span class="mn" id="MathJax-Span-262" style="font-size: 70.7%; font-family: STIXGeneral-Regular;">1</span><span style="display: inline-block; width: 0px; height: 3.992em;"></span></span><span style="position: absolute; clip: rect(3.336em, 1000.44em, 4.156em, -999.997em); top: -3.057em; left: 0.604em;"><span class="mn" id="MathJax-Span-263" style="font-size: 70.7%; font-family: STIXGeneral-Regular;">0</span><span style="display: inline-block; width: 0px; height: 3.992em;"></span></span></span></span><span class="mo" id="MathJax-Span-264" style="font-family: STIXGeneral-Regular;">(</span><span class="mi" id="MathJax-Span-265" style="font-family: STIXGeneral-Italic;">𝑎</span><span class="mo" id="MathJax-Span-266" style="font-family: STIXGeneral-Regular; padding-left: 0.276em;">+</span><span class="mi" id="MathJax-Span-267" style="font-family: STIXGeneral-Italic; padding-left: 0.276em;">𝑥</span><span class="mi" id="MathJax-Span-268" style="font-family: STIXGeneral-Italic;">𝑡</span><span class="msubsup" id="MathJax-Span-269"><span style="display: inline-block; position: relative; width: 0.768em; height: 0px;"><span style="position: absolute; clip: rect(3.172em, 1000.28em, 4.32em, -999.997em); top: -3.986em; left: 0em;"><span class="mo" id="MathJax-Span-270" style="font-family: STIXGeneral-Regular;">)</span><span style="display: inline-block; width: 0px; height: 3.992em;"></span></span><span style="position: absolute; top: -4.423em; left: 0.331em;"><span class="mi" id="MathJax-Span-271" style="font-size: 70.7%; font-family: STIXGeneral-Italic;">𝑘</span><span style="display: inline-block; width: 0px; height: 3.992em;"></span></span></span></span><span class="mspace" id="MathJax-Span-272" style="height: 0em; vertical-align: 0em; width: 0.167em; display: inline-block; overflow: hidden;"></span><span class="mi" id="MathJax-Span-273" style="font-family: STIXGeneral-Italic;">𝑑</span><span class="mi" id="MathJax-Span-274" style="font-family: STIXGeneral-Italic;">𝜆</span><span class="mo" id="MathJax-Span-275" style="font-family: STIXGeneral-Regular;">(</span><span class="mi" id="MathJax-Span-276" style="font-family: STIXGeneral-Italic;">𝑡</span><span class="mo" id="MathJax-Span-277" style="font-family: STIXGeneral-Regular;">)</span><span class="mo" id="MathJax-Span-278" style="font-family: STIXGeneral-Regular;">,</span></span><span style="display: inline-block; width: 0px; height: 3.5em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -1.197em; border-left: 0px solid; width: 0px; height: 3.203em;"></span></span></nobr><span class="MJX_Assistive_MathML MJX_Assistive_MathML_Block" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mn>0</mn><mo>=</mo><mfrac><msup><mi>d</mi><mrow class="MJX-TeXAtom-ORD"><mspace width="thinmathspace"></mspace><mi>k</mi></mrow></msup><mrow><mi>d</mi><msup><mi>x</mi><mrow class="MJX-TeXAtom-ORD"><mspace width="thinmathspace"></mspace><mi>k</mi></mrow></msup></mrow></mfrac><mstyle scriptlevel="0"><mrow class="MJX-TeXAtom-OPEN"><mo maxsize="1.623em" minsize="1.623em">[</mo></mrow></mstyle><msubsup><mo>∫</mo><mn>0</mn><mn>1</mn></msubsup><mi>φ</mi><mspace width="negativethinmathspace"></mspace><mstyle scriptlevel="0"><mrow class="MJX-TeXAtom-OPEN"><mo maxsize="1.2em" minsize="1.2em">(</mo></mrow></mstyle><mi>a</mi><mo>+</mo><mi>x</mi><mi>t</mi><mstyle scriptlevel="0"><mrow class="MJX-TeXAtom-CLOSE"><mo maxsize="1.2em" minsize="1.2em">)</mo></mrow></mstyle><mspace width="thinmathspace"></mspace><mi>d</mi><mi>λ</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><msub><mstyle scriptlevel="0"><mrow class="MJX-TeXAtom-CLOSE"><mo maxsize="1.623em" minsize="1.623em">]</mo></mrow></mstyle><mrow class="MJX-TeXAtom-ORD"><mi>x</mi><mo>=</mo><mn>0</mn></mrow></msub><mo>=</mo><msubsup><mi>φ</mi><mrow class="MJX-TeXAtom-ORD"><mo>+</mo></mrow><mrow class="MJX-TeXAtom-ORD"><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></msubsup><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo><msubsup><mo>∫</mo><mn>0</mn><mn>1</mn></msubsup><mo stretchy="false">(</mo><mi>a</mi><mo>+</mo><mi>x</mi><mi>t</mi><msup><mo stretchy="false">)</mo><mi>k</mi></msup><mspace width="thinmathspace"></mspace><mi>d</mi><mi>λ</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>,</mo></math></span></span></div><script type="math/tex; mode=display" id="MathJax-Element-22">   0=\frac{d^{\,k}}{dx^{\,k}}
+    \Bigl[\int_0^1\varphi\!\bigl(a+xt\bigr)\,d\lambda(t)\Bigr]_{x=0}
+    =\varphi^{(k)}_{+}(0)\int_0^1 (a+xt)^k\,d\lambda(t), </script></span></p>
 
     </main>
 </div>
 </body>
 </html>
-
