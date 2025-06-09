@@ -58,7 +58,41 @@
 
         <h3>1.1.2</h3>
         <p>Provide a computation which shows that the (Euclidean) line element for \(\mathbb{R}^2 \backslash \{(0,0)\}\) in polar coordinates takes the form of \(ds^2 = dr^2 + r^2 d\theta^2\).</p>
+<hr>
+        <p><strong>Solution:</strong></p>
 
+        <p>
+            As previously shown, the (Euclidean) line element, or Riemannian Metric, for \(\mathbb{R}^2\) in Cartesian coordinates takes the form \(ds^2 = dx^2 + dy^2\), and there exists a map from \(\mathbb{R}^2\) in Cartesian coordinates to \(\mathbb{R}^2 \backslash \{(0,0)\}\) in polar coordinates, which is defined parametrically as \(x = r \cos \theta\) and \(y = r \sin \theta\), for all \((x,y) \in \mathbb{R}^2 \backslash \{(0,0)\}\). We proceed by computing \(dx\) and \(dy\) in terms of \(r, \theta, dr, d\theta\), then making a direct substitution into the line element for \(\mathbb{R}^2\) Cartesian coordinates. From our change of coordinates, we have \(x\) and \(y\) as functions of \(r\) and \(\theta\) and we apply the chain rule:
+        </p>
+
+        <div class="math-box">
+  <span class="math-container">$$
+      dx = \frac{\partial x}{\partial r} dr + \frac{\partial x}{\partial \theta} d\theta \implies dx = \frac{\partial}{\partial r}\left[ r \cos \theta \right] dr + \frac{\partial}{\partial \theta}\left[ r \cos \theta \right] d\theta\\
+      \therefore dx = \cos(\theta) dr - r \sin(\theta) d\theta
+        $$</span>
+        </div>
+
+        <div class="math-box">
+  <span class="math-container">$$
+      dy = \frac{\partial y}{\partial r} dr + \frac{\partial y}{\partial \theta} d\theta \implies dy = \frac{\partial}{\partial r}\left[ r \sin \theta \right] dr + \frac{\partial}{\partial \theta}\left[ r \sin \theta \right] d\theta\\
+            \therefore dy = \sin(\theta) dr + r \cos(\theta) d\theta.
+        $$</span>
+        </div>
+
+        <p>Then, we make the following substitution and simplify:</p>
+
+        <div class="math-box">
+  <span class="math-container">$$
+      ds^2 = dx^2 + dy^2 = \left[\cos(\theta) dr - r \sin(\theta) d\theta\right]^2 + \left[\sin(\theta) dr + r \cos(\theta) d\theta\right]^2\\
+      = \left[\cos^2(\theta) dr^2 - 2r \cos(\theta) \sin(\theta) dr d\theta + r^2 \sin^2(\theta) d\theta^2 \right]\\
+            + \left[\sin^2(\theta) dr^2 + 2r \cos(\theta) \sin(\theta) dr d\theta + r^2 \cos^2(\theta) d\theta^2 \right]\\
+            = \left[\sin^2(\theta) + \cos^2(\theta)\right] dr^2 + r^2 \left[\sin^2(\theta) + \cos^2(\theta)\right] d\theta^2\\
+            = dr^2 + r^2 d\theta^2, \text{ as desired.}
+        $$</span>
+        </div>
+
+        <!--
+        <hr>
         <p><strong>Solution:</strong></p>
         <p>
             As previously shown, the (Euclidean) line element, or Riemannian Metric, for \(\mathbb{R}^2\) in Cartesian coordinates takes the form \(ds^2 = dx^2 + dy^2\), and there exists a map from \(\mathbb{R}^2\) in Cartesian coordinates to \(\mathbb{R}^2 \backslash \{(0,0)\}\) in polar coordinates, which is defined parametrically as \(x = r \cos \theta\) and \(y = r \sin \theta\), for all \((x,y) \in \mathbb{R}^2 \backslash \{(0,0)\}\). We proceed by computing \(dx\) and \(dy\) in terms of \(r, \theta, dr, d\theta\), then making a direct substitution into the line element for \(\mathbb{R}^2\) Cartesian coordinates. From our change of coordinates, we have \(x\) and \(y\) as functions of \(r\) and \(\theta\) and we apply the chain rule:
@@ -111,7 +145,9 @@
             \[
             = dr^2 + r^2 d\theta^2, \text{ as desired.}
             \]
-        </p>
+        </p> -->
+
+        <hr>
 
         <h2>Section 1.2: The Framework of Riemannian Geometry</h2>
 
@@ -317,6 +353,12 @@
   $$</span>
         </p>
 -->
+
+
+
+
+<!-- Examples -->
+        <!--
 <hr>
         <div style="overflow-x: auto; background: #f9f9f9; border: 1px solid #ccc; padding: 1em; margin: 1em 0; border-radius: 6px;">
   <span class="math-container">$$
@@ -333,6 +375,16 @@
     = \varphi^{(k)}_+(0) \int_0^1 (a + xt)^k\, d\lambda(t),
   $$</span>
         </div>
+
+        <div class="math-box">
+  <span class="math-container">$$
+  \begin{aligned}
+    0 &= \frac{d^k}{dx^k} \left[ \int_0^1 \varphi(a + xt) \, d\lambda(t) \right]_{x=0} \\
+      &= \varphi_+^{(k)}(0) \int_0^1 (a + xt)^k \, d\lambda(t)
+  \end{aligned}
+  $$</span>
+        </div>
+-->
 
     </main>
 </div>
