@@ -1,21 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ayo, these are my lil sols. my lil qeds </title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"></script>
-    <script type="text/javascript" asyncsrc="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Nicholas Bader – Math Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="favicon.ico" />
+    <meta name="description" content="Math portfolio of Nicholas Bader, senior mathematics major at Temple University.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
 
+    <!-- MathJax -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"></script>
 </head>
 <body>
-    <h1>Math Solutions</h1>
-    
+<div class="container">
+    <header>
+        <h1>Nicholas Bader</h1>
+        <p>Senior B.S. Mathematics | Temple University</p>
+    </header>
+
     <nav>
         <ul>
-            <li><a href="relativity.html">General Relativity</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Math Projects</a></li>
+            <li class="dropdown">
+                <a href="#">Classes ▾</a>
+                <ul class="dropdown-content">
+                    <li><a href="relativity.html">General Relativity</a></li>
+                    <li><a href="neuroscience.html">Mathematical Neuroscience</a></li>
+                    <!-- Add more courses here -->
+                </ul>
+            </li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
-    
+
+
+    <main>
+        <h2>Welcome</h2>
+        <p>
+            This is a collection of mathematical work, notes, and personal projects.
+            It's meant to reflect my academic development, especially in fields like differential geometry, analysis,
+            general relativity, and computational neuroscience.
+        </p>
+
+        <!--
+        <p>
+            Example inline math: \( \nabla_{\mu} T^{\mu \nu} = 0 \) <br>
+            Example display math:
+        </p>
+        <p>
+            \[
+            R_{\mu\nu} - \frac{1}{2} R g_{\mu\nu} = 8\pi T_{\mu\nu}
+            \]
+        </p>
+        -->
+    </main>
+</div>
 </body>
 </html>

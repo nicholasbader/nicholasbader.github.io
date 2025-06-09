@@ -1,14 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Class 1 - Math Solutions</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>General Relativity – Nicholas Bader</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="favicon.ico" />
+    <meta name="description" content="Solutions and notes for General Relativity coursework.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+    <!-- MathJax -->
     <script type="text/javascript" async
-        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
     </script>
 </head>
 <body>
+<div class="container">
+    <header>
+        <h1>General Relativity</h1>
+        <p>Solutions & Notes</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Math Projects</a></li>
+            <li class="dropdown">
+                <a href="#">Classes ▾</a>
+                <ul class="dropdown-content">
+                    <li><a href="relativity.html">General Relativity</a></li>
+                    <li><a href="neuroscience.html">Mathematical Neuroscience</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
     <h1>General Relativity</h1>
 
     <h2>Section 1.1: Riemann's Habilitation</h2>
@@ -48,11 +78,17 @@
         ds^2 = dx^2 + dy^2 = \left[\cos(\theta) dr - r \sin(\theta) d\theta\right]^2 + \left[\sin(\theta) dr + r \cos(\theta) d\theta\right]^2
         \]
     </p>
+
     <p>
         \[
-        = \left[\cos^2(\theta) dr^2 - 2r \cos(\theta) \sin(\theta) dr d\theta + r^2 \sin^2(\theta) d\theta^2 \right] + \left[\sin^2(\theta) dr^2 + 2r \cos(\theta) \sin(\theta) dr d\theta + r^2 \cos^2(\theta) d\theta^2 \right]
+        = \left[\cos^2(\theta) dr^2 - 2r \cos(\theta) \sin(\theta) dr d\theta + r^2 \sin^2(\theta) d\theta^2 \right]
         \]
     </p>
+        <p>
+            \[
+            + \left[\sin^2(\theta) dr^2 + 2r \cos(\theta) \sin(\theta) dr d\theta + r^2 \cos^2(\theta) d\theta^2 \right]
+            \]
+        </p>
     <p>
         \[
         = \left[\sin^2(\theta) + \cos^2(\theta)\right] dr^2 + r^2 \left[\sin^2(\theta) + \cos^2(\theta)\right] d\theta^2
@@ -242,6 +278,8 @@
         </li>
     </ul>
 
-
+    </main>
+</div>
 </body>
 </html>
+
