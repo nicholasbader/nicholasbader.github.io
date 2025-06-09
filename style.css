@@ -166,19 +166,20 @@ nav a:hover {
     }
 }
 
-mjx-container[jax="CHTML"] {
-    max-width: 100%;
+/* Fix for MathJax v2 display math */
+.MathJax_Display {
     overflow-x: auto;
     overflow-y: hidden;
+    padding: 0.5em 0;
+    max-width: 100%;
     box-sizing: border-box;
-    scrollbar-width: thin;
-    scrollbar-color: #aaa #eee;
 }
 
-mjx-container[jax="CHTML"][display="true"] {
-    display: block;
-    padding-bottom: 0.5em;
-    margin-left: auto;
-    margin-right: auto;
+.MathJax_Display::-webkit-scrollbar {
+    height: 6px;
+}
+.MathJax_Display::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 3px;
 }
 
